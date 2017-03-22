@@ -1,0 +1,15 @@
+dude:
+    build: .
+    container_name: "dude"
+    net: "host"
+    volumes:
+        - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+        DISPLAY: $DISPLAY
+        WINEDLLOVERRIDES: "mscoree,mshtml="
+#    entrypoint:
+#        - winecfg
+    command:
+        ["\\Dude\\dude-install-3.6.exe"]
+#        ["c:\\Dude\\dude.exe"]
+
